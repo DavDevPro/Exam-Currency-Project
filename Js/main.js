@@ -25,6 +25,7 @@ async function getData(url) {
     const rawData = await fetch(url);
     const { data } = await rawData.json();
     currencies = data;
+    if(!currencies.length == 0) render(data)
     localStorage.setItem("currencies", JSON.stringify(data));
   } catch (error) {
     console.error(error);
