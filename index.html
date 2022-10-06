@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Css/style.css" />
+    <title>Exam Task from Davronbek</title>
+  </head>
+  <body>
+    <!-- LOADER -->
+    <div class="spinner__wrapper">
+      <img src="/Images/Spinner-1s-200px.gif" width="100" height="100" />
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Davronbek</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <!-- SORT SELECT -->
+      <div class="box d-flex mb-5">
+        <select class="form-select" aria-label="Default select example">
+          <option selected disabled>Select</option>
+          <option value="expensive">Expensive</option>
+          <option value="cheap">Cheap</option>
+          <option value="default">Default</option>
+        </select>
+
+        <!-- FILTER INPUT -->
+        <input
+          type="text"
+          class="form-control mx-5"
+          placeholder="Enter minimum price..."
+        />
+
+        <!-- THE BASKET -->
+        <button class="btn btn-warning position-relative">
+          <img src="/Images/basket-fill.svg" alt="" />
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          >
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+      </div>
+
+      <!-- TABLE IN CARD -->
+      <div class="card">
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Letter code</th>
+              <th>Price Row</th>
+              <th>New Date</th>
+              <th>Mark</th>
+            </tr>
+          </thead>
+          <tbody id="table__body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MODAL BUTTON (display-none) -->
+    <button
+      type="button"
+      class="modal__btn btn btn-primary d-none"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Open Modal
+    </button>
+
+    <!-- MODAL -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <strong>Subscribe to our telegram channel!</strong> <br />
+            <br />
+            <a
+              href="https://t.me/akbarjondev"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <img
+                src="/Images/pointing-right-finger-svgrepo-com.svg"
+                height="25" />
+              &nbsp Akbarjon Developer <br
+            /></a>
+            <br />
+            <i>Or click the Accept button!</i>
+          </div>
+          <div class="modal-footer">
+            <a href="https://t.me/akbarjondev" target="_blank"
+              ><button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Accept
+              </button></a
+            >
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMPLATE -->
+    <template id="template">
+      <tr class="tr">
+        <th class="code">1</th>
+        <td class="name">Yaponiya iyenasi</td>
+        <td class="letter__code">JPY</td>
+        <td class="price">74.5</td>
+        <td class="date">05.10.22</td>
+        <td dataset-id="2" class=" d-flex justify-content-start">
+          <button class="bookmark__btn btn btn-warning">
+            <img class="bookmark__btn" src="/images/bookmark.svg" alt="" />
+          </button>
+        </td>
+      </tr>
+    </template>
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/Js/main.js"></script>
+  </body>
+</html>
